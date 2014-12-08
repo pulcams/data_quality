@@ -3,6 +3,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:marc="http://www.loc.gov/MARC21/slim"
     xmlns:clean="clean" exclude-result-prefixes="xs clean" version="3.0">
 
+    <!-- Main stylesheet for cleaning MARC XML. -->   
+
     <xsl:output method="xml" encoding="UTF-8"/>
     
     <!-- Include cleaning functions. -->
