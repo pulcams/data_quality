@@ -6,7 +6,7 @@
     <xsl:output method="xml" encoding="UTF-8"/>
     
     <!-- Include cleaning functions. -->
-    <xsl:include href="clean_marc.xsl"/>  
+    <xsl:include href="clean_marc_functions.xsl"/>  
 
     <!-- Identity template. -->
     <xsl:template match="@*|node()">
