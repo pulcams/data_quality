@@ -33,8 +33,8 @@
         <xsl:text>&#9;</xsl:text>
         <xsl:for-each select="$fields/field">
             <xsl:value-of select="@tag"/>
-            <xsl:value-of select="if (@ind1 = ' ') then 'blank' else (@ind1)"/>
-            <xsl:value-of select="if (@ind2 = ' ') then 'blank' else (@ind2)"/>
+            <xsl:value-of select="if (@ind1 = ' ') then '_' else (@ind1)"/>
+            <xsl:value-of select="if (@ind2 = ' ') then '_' else (@ind2)"/>
             <xsl:value-of select="concat('$',@code)"/>
             <xsl:if test="position()!=last()">
                 <xsl:text>&#9;</xsl:text>
