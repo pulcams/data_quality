@@ -101,7 +101,7 @@
     </xsl:template>
 
     <xsl:template match="field">
-        <xsl:value-of select="normalize-space()"/>
+        <xsl:value-of select="."/>
     </xsl:template>
 
 </xsl:stylesheet>
