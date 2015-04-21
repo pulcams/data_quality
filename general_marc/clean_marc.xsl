@@ -65,7 +65,7 @@
     </xsl:template>
 
     <!-- Correct ISBD punctuation for 264 subfield $a. -->
-    <xsl:template match="marc:datafield[@tag = '264']/marc:subfield[@code = 'a']">     
+    <xsl:template match="marc:datafield[@tag = '264']/marc:subfield[@code = 'a'] | marc:datafield[@tag = '260']/marc:subfield[@code = 'a']">     
         <xsl:choose>
             <xsl:when test="following-sibling::*[1][self::marc:subfield[@code = 'a']]">
                 <marc:subfield code="a">
@@ -81,7 +81,7 @@
     </xsl:template>
     
     <!-- Correct ISBD punctuation for 264 subfield $b. --> 
-    <xsl:template match="marc:datafield[@tag = '264']/marc:subfield[@code = 'b']">        
+    <xsl:template match="marc:datafield[@tag = '264']/marc:subfield[@code = 'b'] | marc:datafield[@tag = '260']/marc:subfield[@code = 'b']">        
         <xsl:choose>
             <xsl:when test="following-sibling::*[1][self::marc:subfield[@code = 'a']]">
                 <marc:subfield code="b">
